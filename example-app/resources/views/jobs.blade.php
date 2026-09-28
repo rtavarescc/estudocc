@@ -7,7 +7,7 @@ Vagas de emprego
 
 @foreach($jobs as $job)
 <li>
-    <a href="/jobs/{{ $job['id'] }}" class=" text-blue-500, hover:underline">
+    <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
         <strong> {{ $job ['title'] }}:</strong> Paga {{ $job ['salary'] }} por ano.
     </a>
 </li>

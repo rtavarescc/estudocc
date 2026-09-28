@@ -16,7 +16,7 @@
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
                             <!-- Logo / Identificação -->
-                            <span class="text-white font-bold text-xl">RenzoModel</span>
+                            <span class="text-white font-bold text-xl">Laracasts</span>
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
