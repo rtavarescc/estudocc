@@ -11,6 +11,8 @@ class Post extends Model
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function comments(){
 
         return $this->hasMany(Comment::class);
@@ -21,6 +23,12 @@ class Post extends Model
 
         return $this->belongsTo(User::class);
         
+    }
+
+    public function tags(){
+
+        return $this->belongsToMany(Tag::class);
+
     }
     
 }

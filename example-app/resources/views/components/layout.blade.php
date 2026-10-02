@@ -16,7 +16,8 @@
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
                             <!-- Logo / Identificação -->
-                            <span class="text-white font-bold text-xl">Laracasts</span>
+                             <a href="/" class="text-white font-bold text-xl">Renzo</a>
+                          <!--  <span class="text-white font-bold text-xl">Renzo</span> -->
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
@@ -33,10 +34,12 @@
 
         <!-- Cabeçalho Dinâmico (Título da Página) -->
         <header class="bg-white shadow">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">
                     {{ $heading }}
                 </h1>
+
+                <x-button href="/jobs/create"> Criar Nova Vaga </x-button>
             </div>
         </header>
 
