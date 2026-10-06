@@ -34,12 +34,12 @@
         </div>
 
         <div class="mt-6 flex items-center justify-between gap-x-6">
-            <div>
-                <button></button>
+            <div class="flex items-center">
+                <button form="delete-form" class="text-red-500 text-sm font-bold rounded hover:bg-red-700 shadow-sm px-3 py-2">Deletar</button>
             </div>
             <div class="flex items-center gap-x-6">
                 <a href="/jobs/{{ $job->id }}"
-                    class="rounded-md bg-red-600 px-3 text-sm font-semibold text-white shadow-sm hover:bg-red-500 px-4 py-2 rounded">Cancelar</a>
+                    class="rounded-md  px-3 text-sm font-semibold text-black shadow-sm hover:bg-red-500 px-4 py-2 rounded">Cancelar</a>
                 <div>
                     <button type="submit"
                         class="rounded-md bg-indigo-600 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 px-4 py-2 rounded">Atualizar
@@ -48,6 +48,11 @@
             </div>
         </div>
 
+    </form>
+
+    <form method="post" action="/jobs/{{ $job->id }}" onsubmit="return confirm('Tem certeza que deseja deletar esta vaga?');" id="delete-form" class="hidden">
+        @csrf
+        @method('DELETE')
     </form>
 
 </x-layout>
